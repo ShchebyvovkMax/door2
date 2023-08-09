@@ -1,0 +1,60 @@
+
+body {
+	background-image: url("background.jpg");
+	background-size:cover ;
+	background-size: 80%;
+	opacity: 0.9;
+}
+
+
+h1 {
+	font-size: ;
+		text-align: inherit;
+		color: white;
+		right: 1000px;
+	}
+	.btn {
+		font-weight: 700;
+		border-radius: 300px;
+		padding: 1rem 2 rem;
+		text-transform: uppercase;
+}
+
+	}
+
+
+
+.btn-primary {	
+    background-color: #F05F44;	
+    border-color: #F05F44;	
+    --bs-btn-hover-bg: #ee4b08;	
+    --bs-btn-hover-border-color: #ee4b08;
+}
+.buffer {
+	height: 30px;
+}
+.door {
+	text-align: center;
+	
+	position: relative;
+  width: 50%; /* Adjust as needed */
+
+	
+}
+.container {
+	margin-top: 7%;
+	position: relative;
+  width: 50%; /* Adjust as needed */
+  max-width: 600px; /* Set a maximum width for the container */
+display: grid;
+	grid-template-start:1;
+}
+.form {
+	position: absolute;
+  top: 40%; /* Adjust to position vertically */
+  left: 70%; /* Adjust to position horizontally */
+  transform: translate(-50%, -50%);
+  
+  padding: 10px;
+  border-radius: 5px;
+}
