@@ -1,0 +1,39 @@
+<html>
+  <body style="background-color: green;">
+    <h1>Current Site ID list</h1>
+
+    <textarea name="old" id="currentID" cols="100" rows="10"></textarea>
+    <h1>New Site ID list</h1>
+    <textarea name="new" id="newLID" cols="100" rows="10"></textarea><br /><br />
+
+    <button class="favorite styled" type="button" onclick="compareLists()">Compare</button>
+    <button class="favorite styled" type="button" onclick="clearFields()">Clear</button>
+
+    <h1>Result</h1>
+    <textarea name="result" id="resultArea" cols="100" rows="10"></textarea>
+
+    <script>
+      function compareLists() {
+        let currentList = document.getElementById("currentID").value;
+        let newList = document.getElementById("newLID").value;
+
+        // Convert strings to arrays
+        const currentArray = currentList.split(";").map(Number);
+        const newArray = newList.split(";").map(Number);
+
+        // Identify elements from the new list that are not in the current list
+        const missingElements = newArray.filter(element => !currentArray.includes(element));
+
+        // Set the result in the resultArea textarea
+        document.getElementById("resultArea").value = "Missing elements are: " + missingElements.join(", ");
+      }
+
+      function clearFields() {
+        // Clear the content of text areas
+        document.getElementById("currentID").value = "";
+        document.getElementById("newLID").value = "";
+        document.getElementById("resultArea").value = "";
+      }
+    </script>
+  </body>
+</html>
